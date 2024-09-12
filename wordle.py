@@ -2,8 +2,10 @@ from random import randint
 
 num = str(randint(1000, 9999))  # Creating a random four-digit number
 # print(num)
-print("Try to guess a four-digit number.\nRules:\n1) If digit isn't in the target: gray.\n"
-      "2) If it's in and it's on right place: green.\n3) If digit is in target, but not on the right place: yellow")
+print("Try to guess a four-digit number.\nRules:\n"
+      "1) If digit isn't in the target: gray.\n"
+      "2) If it's in and it's on right place: green.\n"
+      "3) If digit is in target, but not on the right place: yellow")
 user_ans = ''  # A string of user input
 
 while user_ans != num:
