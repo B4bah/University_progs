@@ -1,15 +1,16 @@
 from random import randint
 
-num = str(randint(1000, 9999))
+num = str(randint(1000, 9999))  # Creating a random four-digit number
 # print(num)
-print('Try to guess a four-digit number')
-user_ans = ''
+print("Try to guess a four-digit number.\nRules:\n1) If digit isn't in the target: gray.\n"
+      "2) If it's in and it's on right place: green.\n3) If digit is in target, but not on the right place: yellow")
+user_ans = ''  # A string of user input
 
 while user_ans != num:
     user_ans = input('Type your guess:\n>>> ')
     if len(user_ans) != 4:
         user_ans = input('Incorrect length, try again:\n>>> ')
-    for i in range(len(user_ans)):
+    for i in range(len(user_ans)):  # Iterating user answer digit by digit to check its correctness
         if user_ans[i] in num:
             if num[i] == user_ans[i]:
                 print(f'{user_ans[i]}: green')
