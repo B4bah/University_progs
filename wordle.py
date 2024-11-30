@@ -16,7 +16,6 @@ while user_ans != num:
             elif num.count(user_ans[i]) >= user_ans.count(user_ans[i]) or num.count(user_ans[i]) == 1:
                 print(user_ans[i], ': yellow', sep='')
             else:
-q
                 print(user_ans[i], ': gray', sep='')
         else:
             print(user_ans[i], ': gray', sep='')
