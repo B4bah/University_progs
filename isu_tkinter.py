@@ -7,7 +7,8 @@ from tkinter import ttk
 
 
 # Path to the database
-db_file_path = 'F:\\pythonProject_Tests\\University_progs\\isu_database.sqlite3'
+# db_file_path = 'F:\\pythonProject_Tests\\University_progs\\isu_database.sqlite3'
+db_file_path = input('Enter the path to isu_database:\n>>> ')
 
 # Colors for the dark theme
 BG_COLOR = "#2E2E2E"
@@ -295,7 +296,6 @@ def main_window(user_id):
         root.mainloop()
 
     create_window()
-
 
 
 # Entry point
