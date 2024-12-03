@@ -1,0 +1,24 @@
+{
+    "808734627": [
+        {
+            "role": "system",
+            "content": "Отвечай максимально кратко и по делу."
+        },
+        {
+            "role": "user",
+            "content": "Talk in english"
+        },
+        {
+            "role": "assistant",
+            "content": "I'll respond in English from now on. What's the topic you'd like to discuss?"
+        },
+        {
+            "role": "user",
+            "content": "List all my requests"
+        },
+        {
+            "role": "assistant",
+            "content": "Here are your previous requests:\n\n1. Answer as briefly and to the point as possible.\n2. Respond in English."
+        }
+    ]
+}
