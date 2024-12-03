@@ -7,8 +7,7 @@ from tkinter import ttk
 
 
 # Path to the database
-# db_file_path = 'F:\\pythonProject_Tests\\University_progs\\isu_database.sqlite3'
-db_file_path = input('Enter the path to isu_database:\n>>> ')
+db_file_path = 'isu_database.sqlite3'
 
 # Colors for the dark theme
 BG_COLOR = "#2E2E2E"
@@ -136,7 +135,7 @@ def main_window(user_id):
     def create_window():
         root = tk.Tk()
         root.title("Database Viewer")
-        root.geometry("800x600")
+        root.geometry("800x700")
         root.resizable(False, False)
 
         # Create style for the table
@@ -145,7 +144,7 @@ def main_window(user_id):
         style.configure("Treeview",
                         background=TABLE_ROW_BG,
                         foreground=TABLE_ROW_FG,
-                        rowheight=25,
+                        rowheight=23,
                         fieldbackground=TABLE_ROW_BG)
         style.map("Treeview",
                   background=[('selected', TABLE_SELECTED_BG)],
@@ -181,7 +180,7 @@ def main_window(user_id):
         )
 
         # Set fixed width for the photo frame
-        frame_photo = tk.Frame(root, bg=HEADER_COLOR, width=300, height=600)  # Fixed width and height
+        frame_photo = tk.Frame(root, bg=HEADER_COLOR, width=200, height=600)  # Fixed width and height
         frame_photo.pack(side=tk.RIGHT, fill=tk.Y)  # Fill vertically only
         frame_photo.pack_propagate(False)  # Prevent resizing of frame based on content
 
@@ -194,7 +193,7 @@ def main_window(user_id):
         image_label.pack(padx=10, pady=10)
 
         # Create the table
-        tree = ttk.Treeview(frame_table, columns=("Row", "ID", "Passbook Number", "Full Name"), show="headings", height=20)
+        tree = ttk.Treeview(frame_table, columns=("Row", "ID", "Passbook Number", "Full Name"), show="headings", height=23)
 
         # Sorting states
         sort_states = {"ID": "asc", "Passbook Number": "asc", "Full Name": "asc"}
@@ -233,7 +232,7 @@ def main_window(user_id):
 
         # Create header buttons for sorting
         tree.heading("Row", text="Row", anchor="center")  # No sorting for the Row column
-        tree.column("Row", width=50, anchor="center")
+        tree.column("Row", width=45, anchor="center")
 
         for col in ("ID", "Passbook Number", "Full Name"):
             tree.heading(col, text=col, anchor="center", command=lambda col=col: sort_by(col))
