@@ -1,4 +1,4 @@
-import requests
+import requests, sqlite3
 from bs4 import BeautifulSoup
 
 url = 'https://www.smtu.ru/ru/viewschedule/20150/'
@@ -13,3 +13,4 @@ for item in soup.findAll('small'):
 
 for item in tutors:
     print(item)
+

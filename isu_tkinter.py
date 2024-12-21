@@ -4,7 +4,9 @@ from PIL import Image, ImageTk
 import io
 import tkinter as tk
 from tkinter import ttk
-
+# NOTE: to install PIL you need to install pillow instead of PIL
+# how to install PIL from terminal run: pip install pillow
+# WARNING: passwords have one pattern: id + first two letters from full_name
 
 # Path to the database
 db_file_path = 'isu_database.sqlite3'
@@ -161,6 +163,17 @@ def main_window(user_id):
         # Frames for table and photo
         frame_table = tk.Frame(root)
         frame_table.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        def handle_shortcut(event):
+            # Keycodes for 'C', 'X', 'V', and 'A' on any layout
+            if event.state & 0x4:  # Check if Control key is pressed
+                if event.keycode == 87:  # 'W'
+                    root.mainloop()
+                    return 'break'
+            # Let other keys function normally
+            return None
+
+        root.bind("<KeyPress>", handle_shortcut)
 
         # Get number of rows in the database
         def get_row_count():
