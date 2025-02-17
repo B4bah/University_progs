@@ -11,7 +11,7 @@ def get_drive_name():
             my_drive.append(item)
     if my_drive:
         for item in my_drive:
-            if win32api.GetVolumeInformation(item[0:3])[0] == 'OSIPOV':
+            if win32api.GetVolumeInformation(item[0:3])[0] == 'FLASH_DRIVE':
                 return item[0]
     else:
         print('Cannot find removable drive')
@@ -20,9 +20,9 @@ def get_drive_name():
 
 def new_dirs():
     drive_letter = get_drive_name()
-    os.chdir(f'{drive_letter}:/Osipov_Michael_20150/pythonProject/University_progs')
+    os.chdir(f'{drive_letter}:\\pythonProject_Tests\\University_progs')
     date = datetime.today().strftime('%Y/%m/%d').split('/')
-    os.chdir(f'{drive_letter}:/Osipov_Michael_20150/pythonProject/University_progs')
+    os.chdir(f'{drive_letter}:\\pythonProject_Tests\\University_progs')
     for item in date:
         if os.path.exists(dir := f'{item}'):
             os.chdir(dir)

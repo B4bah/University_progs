@@ -47,4 +47,3 @@ plt.xticks(range(12), [f'Month {i}' for i in range(1, 13)], rotation=45)
 plt.legend(title="Department")
 plt.tight_layout()
 plt.show()
-

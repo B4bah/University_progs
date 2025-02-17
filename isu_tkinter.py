@@ -12,10 +12,11 @@ from tkinter import ttk
 db_file_path = 'isu_database.sqlite3'
 
 # Colors for the dark theme
-BG_COLOR = "#2E2E2E"
+BG_COLOR = "#1E1F22"
+# BG_COLOR = "#2E2E2E"
 HEADER_COLOR = "#1E1E1E"
 FG_COLOR = "#FFFFFF"
-ENTRY_BG = "#3E3E3E"
+ENTRY_BG = "#252427"
 ENTRY_FG = "#FFFFFF"
 BUTTON_BG = "#5E5E5E"
 BUTTON_FG = "#FFFFFF"

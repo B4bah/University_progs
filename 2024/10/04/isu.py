@@ -27,7 +27,7 @@ isu_list = ([136083, 2420055, 'Алтухов Роман Сергеевич'],
             [135995, 2420079, 'Шейда Олег Игоревич'])
 
 isu_dict = {item[1]: [item[0], item[2]] for item in isu_list}
-print(*isu_dict.items())
+# print(*isu_dict.items())
 
 # print(list(isu_dict.items()))
 

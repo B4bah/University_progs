@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator, FormatStrFormatter)
 from pandas.core.interchange.dataframe_protocol import DataFrame
 
-file_path1 = 'E:\\Data\\yob2009.txt'
-file_path2 = 'E:\\Data\\yob2010.txt'
+file_path1 = 'E:\\pythonProject_Tests\\University_progs\\Data\\yob2009.txt'
+file_path2 = 'E:\\pythonProject_Tests\\University_progs\\Data\\yob2010.txt'
 data1 = pd.read_csv(file_path1, delimiter=',', names=['Name', 'Sex', 'Amount'], encoding='windows-1251')
 data2 = pd.read_csv(file_path2, delimiter=',', names=['Name', 'Sex', 'Amount'], encoding='windows-1251')
 
