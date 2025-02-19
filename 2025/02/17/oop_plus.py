@@ -168,8 +168,9 @@ for tutor in tutors:
 print(smtu)
 
 # Teaching Students
-for tutor in tutors:
-    tutor.teach(smtu, 1)
+for _ in range(20):
+    for tutor in tutors:
+        tutor.teach(smtu, 1)
 
 # Examinating Students
 for tutor in tutors:
