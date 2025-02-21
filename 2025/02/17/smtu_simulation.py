@@ -376,7 +376,7 @@ def simulate_smtu(logs=False):
                             break
                         elif more == '' or more == 'exit':
                             exit(f'\033[31mUniversity model simulation completed!\033[0m')
-                    print("⚠️ Invalid group. Please enter a valid number from the list.")
+                    print("\033[33m⚠️ Invalid group. Please enter a valid number from the list.\033[0m")
             elif choice == "3":
                 while True:
                     print("💡 Available tutors:", [f"{t.name} ({t.subject})" for t in tutors])
@@ -393,11 +393,11 @@ def simulate_smtu(logs=False):
                             break
                         elif more == '' or more == 'exit':
                             exit(f'\033[31mUniversity model simulation completed!\033[0m')
-                    print("⚠️ Invalid tutor name. Please enter a valid name from the list.")
+                    print(f"\033[33m⚠️ Invalid tutor name. Please enter a valid name from the list.\033[0m")
             elif choice == 'exit' or choice == '':
                 exit(f'\033[31mUniversity model simulation completed!\033[0m')
             else:
-                print("⚠️ Invalid input. Please try again.")
+                print("\033[33m⚠️ Invalid input. Please try again.\033[0m")
 
 
 if __name__ == '__main__':
